@@ -22,7 +22,7 @@ public class SaveManager : MonoBehaviour {
 	public void Load(){
 		if (PlayerPrefs.HasKey ("save")) {
 		
-			saveState = Helper.Deserlialize<SaveState> (PlayerPrefs.GetString("save")); 
+			saveState = Helper.Deserialize<SaveState> (PlayerPrefs.GetString("save")); 
 		
 		} else {
 

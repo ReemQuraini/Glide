@@ -72,7 +72,11 @@ public class menuScript : MonoBehaviour {
 	}
 
 	private void navigateTo(int menuIndex){
-		
+		switch (menuIndex) {
+
+		//default:
+
+		}
 	}
 
 
@@ -96,13 +100,14 @@ public class menuScript : MonoBehaviour {
 	{
 	}
 
-	public void onLevelSelect(){
-	}
+
 
 	public void onBackClick(){
 	
 	}
 
+	public void onLevelSelect(int currentIndex){
+	}
 
 	private void onColorSelect(int currentIndex){
 	}
