@@ -69,12 +69,23 @@ public class menuScript : MonoBehaviour {
 
 	private void Update(){
 		fadeGroup.alpha =1- Time.timeSinceLevelLoad * fadeInSpeed;
+
+		menuContainer.anchoredPosition3D = Vector3.Lerp (menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
 	}
 
 	private void navigateTo(int menuIndex){
 		switch (menuIndex) {
 
-		//default:
+		default:
+		case 0:
+			desiredMenuPosition = Vector3.zero;
+			break;
+		case 1:
+			desiredMenuPosition = Vector3.right * 1280;
+			break;
+		case 2:
+			desiredMenuPosition = Vector3.left * 1280;
+			break;
 
 		}
 	}
@@ -84,12 +95,12 @@ public class menuScript : MonoBehaviour {
 
 	public void onPlayClick()
 	{
-		
+		navigateTo (1);
 	}
 
 	public void onShopClick()
 	{
-		
+		navigateTo (2); 	
 	}
 
 	public void onColorBuy()
@@ -103,6 +114,7 @@ public class menuScript : MonoBehaviour {
 
 
 	public void onBackClick(){
+		navigateTo (0);
 	
 	}
 
